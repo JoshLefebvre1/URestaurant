@@ -1,0 +1,72 @@
+<div class="panel panel-default col-sm-12 col-md-4 col-lg-4 col-centered" style="margin: 125px 0px 125px 0px">
+	<div class="panel-body">
+		<form action="/urestaurant/host" method="post">
+
+			<h1>Create an Event</h1>
+			<div class="form-group">
+				<label for="InputEvent">Event Name</label> 
+				<input type="text" class="form-control" id="eventName" placeholder="Enter an Event Name">
+			</div>
+
+			<div class="form-group">
+				<label for="InputLocation">Location</label> 
+				<input type="text" class="form-control" id="address" placeholder="Enter an address">
+			</div>
+
+			<div class="form-group">
+				<label for="InputDate">Event Date</label> 
+				<input type="date" class="form-control" id="date">
+			</div>
+
+			<div class="form-group">
+				<label for="InputStartTime">Event Time</label> 
+				<input type="time" class="form-control" id="startTime">
+			</div>
+			
+			<div class="form-group">
+				<label for="InputEndTime">End Time</label> 
+				<input type="time" class="form-control" id="endTime">
+			</div>
+
+			<div class="form-group">
+				<label for="InputLocation">Description</label>
+				<textarea class="form-control" rows="3"placeholder="Enter an event description..."></textarea>
+			</div>
+
+			<div class="form-group">
+				<label for="InputPicture">Event Picture</label> 
+				<input type="file" id="exampleInputFile">
+			</div>
+
+			<label for="InputStatus">Event Status</label>
+
+			<div class="radio">
+				<label> <input type="radio" name="optionsRadios"
+					id="optionsRadios1" value="option1" checked> Event is
+					Public
+				</label>
+			</div>
+			<div class="radio">
+				<label> <input type="radio" name="optionsRadios"
+					id="optionsRadios2" value="option2"> Event is Private
+				</label>
+			</div>
+
+			<div class="modal-footer sgn-cntrl">
+				<button class="btn btn-info" type="submit"
+					style="margin-right: 10px;">
+					Create
+				</button>
+				<button id="sgn-cancel" class="btn btn-danger" type="reset"
+					data-dismiss="modal">
+					Cancel
+				</button>
+			</div>
+		</form>
+	</div>
+</div>
+<!-- Start Scripts -->
+<script>
+	
+</script>
+<!-- End Scripts -->

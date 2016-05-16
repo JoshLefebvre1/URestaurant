@@ -1,0 +1,191 @@
+<!-- 
+/*
+ * File name: home.html
+ * Author: Christopher Elliott
+ * Date: 01/02/2015 (DD/MM/YYYY)
+ * Page to experiment with various functionality and design details.
+ * NOT USED IN THE APPLICATION
+ */
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+</head>
+<body>
+	<div id="wrapper">
+		<!-- Sidebar -->
+	    <div id="sidebar-wrapper">
+	    	<h3>urestaurant</h3>
+	        <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+	            <li class="active">
+	                <a href="#">Home</a>
+	            </li>
+	            <li>
+	                <a href="#">Profile</a>
+	            </li>
+	            <li>
+	                <a href="#">Invites</a>
+	            </li>
+	            <li>
+	                <a href="#">Events</a>
+	            </li>
+	            <li>
+	                <a href="#">About</a>
+	            </li>
+	            <li>
+	                <a href="#">Help</a>
+	            </li>
+	        </ul>
+	    </div><!-- /#sidebar-wrapper -->
+		<!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid xyz">
+                <div class="row">
+	                <div class="panel panel-default login-pnl col-sm-12 col-md-4 col-lg-4">
+	                	<div class="panel-body">
+	                		<h3 style="margin-left: 15px;">Already Signed Up?</h3>
+		                	
+		                	
+		                	<form action="/urestaurant/LoginServlet" id="sign-in-frm" method="post">
+		                	
+		                		<div class="row">
+		                			<label class="label label-default" for="user-name">Username</label>
+		                		</div>
+		                		<div class="row">
+		                			<input id="user-name" class="form-control" type="text" name="user-name" />
+		                		</div>
+		                		<div class="row">
+		                			<label class="label label-default" for="password">Password</label>
+		                		</div>
+		                		<div class="row">
+		                			<input id="password" class="form-control" type="text" name="password"/>
+		                		</div>
+		                		<div class="row">
+		                			<button id="loginSubmit" name="loginSubmit" value= "login" class="btn btn-info" type="submit">Login</button>
+		                			<button class="btn btn-default" type="reset">Cancel</button>
+		                			<a href="#">Forgot your password?</a>
+		                		</div>
+		                	</form>
+		                		                	
+		                	
+		                	<div id="ajaxResponse">		            
+		                	</div>		           
+		                	
+		                 	
+		                </div>
+	                </div>
+                    <div class="panel panel-default col-sm-12 col-md-4 col-lg-4">
+                    	<div class="panel-body">
+                    		<h3 style="margin-left: 15px;">New Users. Welcome!</h3>
+	                        <form id="sign-in-frm" method="post">
+	                        	<div class="row">
+	                        		<div>
+	                        			<div>
+	                        				<label class="label label-default">First Name</label>
+	                        			</div>
+	                        			<div>
+	                        				<input class="form-control" type="text" />
+	                        			</div>
+	                        		</div>
+	                        		<div>
+		                				<div>
+	                        				<label class="label label-default">Last Name</label>
+	                        			</div>
+	                        			<div>
+	                        				<input class="form-control" type="text" />
+	                        			</div>
+		                			</div>
+		                		</div>
+		                		<div class="row">
+		                			<label class="label label-default">Email</label>
+		                		</div>
+		                		<div class="row">
+		                			<div class="input-group">
+		                				<input type="text" class="form-control">
+									  	<span class="input-group-addon">@</span>
+									  	<input type="text" class="form-control">
+									</div>
+		                		</div>
+		                		<div class="row">
+		                			<label class="label label-default">Username</label>
+		                		</div>
+		                		<div class="row">
+		                			<input class="form-control" type="text" />
+		                		</div>
+		                		<div class="row">
+		                			<label class="label label-default">Password</label>
+		                		</div>
+		                		<div class="row">
+		                			<input class="form-control" type="text" />
+		                		</div>
+		                		<div class="row">
+		                			<label class="label label-default">Confirm Password</label>
+		                		</div>
+		                		<div class="row">
+		                			<input class="form-control" type="text" />
+		                		</div>
+		                		<div class="row">
+		                			<button class="btn btn-default form-control" type="submit">Sign-in</button>
+		                			<button class="btn btn-default form-control" type="reset">Cancel</button>
+		                		</div>
+		                	</form>
+		                </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- /#page-content-wrapper -->
+	</div>
+     
+    <!-- jQuery -->
+    <script src="js/jquery-1.12.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sidebar_menu.js"></script>
+    <script>
+       $(document).ready(function(){
+       	 $("#sign-in-frm").submit(function(event)
+       	 {
+       		 event.preventDefault();
+       		 console.log(event);
+               $.ajax({
+                   type: 'post',
+                   url:"/urestaurant/LoginServlet",   // this is my servlet
+                   data: $("#sign-in-frm").serialize(),
+                   dataType: "json",
+               }).done(function(data) {
+            	   if(data.responseText=="isValid")
+            	   {
+            		   window.location.href = "/urestaurant/home.html"
+            	   }
+            	   else
+            	   {
+            	   		$("#ajaxResponse").text(data.responseText);
+            	   }
+               }).fail(function(data) {
+            	   console.log(data);
+            	   alert("Oops! Sorry we cannot process the request at this time.");
+               });                                
+           });
+       });
+		</script>
+    <!--<script>
+    	$(function(){
+    		$("ul").hide();
+    		
+    		$("form").submit(function(event) {
+    			//event.preventDefault();
+    			$("ul").fadeIn(1000);
+    		});
+    	});
+    </script>-->
+</body>
+</html>

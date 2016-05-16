@@ -1,0 +1,158 @@
+<!-- 
+/*
+ * File name: event.html
+ * Author: Jeremy Chen
+ * Date: 11/02/2015 (DD/MM/YYYY)
+ * Users home page
+ */
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Urestaurant</title>
+<meta name="description"
+	content="The best event hosting app in Web Programming 2016">
+<meta name="author" content="Web Project 2016">
+
+<!-- Start Bootstrap CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/themes/darkly.css" rel="stylesheet">
+<!-- End Bootstrap CSS -->
+
+<!-- Start custom CSS -->
+<link href="css/custom.css" rel="stylesheet">
+<link href="css/sidebar.css" rel="stylesheet">
+<!-- End Custom CSS -->
+
+<!-- HTML5 shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Start Inline CSS (overrides all of the above styles) -->
+<style type="text/css">
+.jumbotron, .page {
+	padding-top: 140px;
+	padding-bottom: 140px;
+	margin-bottom: 0px;
+}
+</style>
+<!-- End Inline CSS -->
+
+</head>
+<body style="padding-top: 50px;">
+	<div id="wrapper">
+		<!-- Start Sidebar -->
+		<nav class="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand"><a href="#" class="visible-sm visible-md visible-lg">Events</a></li>
+				<li><a href="#"><span class="visible-sm visible-md visible-lg">Browse Events</span><i class="glyphicon glyphicon-home visible-xs"></i></a></li>
+				<li><a href="#"><span class="visible-sm visible-md visible-lg">Host an Event</span><i class="glyphicon glyphicon-globe visible-xs"></i></a></li>
+				<li><a href="#"><span class="visible-sm visible-md visible-lg">Settings</span><i class="fa fa-cog visible-xs"></i></a></li>
+				<li><a href="#"><span class="visible-sm visible-md visible-lg">Logout</span><i class="fa fa-sign-out visible-xs"></i></a></li>
+			</ul>
+		</nav>
+		<!-- End Sidebar -->
+
+		<!-- Start Content -->
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12">
+						<!-- Start Section -->
+						<div id="tabs">
+							<div class="container">
+								<div class="row">
+									<div class="col-xs-10 col-md-12">
+										<!-- Nav tabs -->
+										<ul class="nav nav-pills">
+											<li role="presentation"><a href="#tab1"
+												data-toggle="tab">Browse Events</a></li>
+											<li role="presentation"><a href="#tab2"
+												data-toggle="tab">Geolocation</a></li>
+										</ul>
+										<p></p>
+										<!-- Tab panes -->
+										<div class="tab-content">
+											<div role="tabpanel" class="tab-pane active" id="tab1">
+												<div class="table-responsive">
+													<table class="table table-bordered table-striped">
+														<tr>
+															<th>Event</th>
+															<th>Start</th>
+															<th>End</th>
+															<th>Private</th>
+															<th>Availability</th>
+														</tr>
+														<tr>
+															<td>Urestaurant</td>
+															<td>15 June 2016 6:00pm</td>
+															<td>15 June 2016 7:00pm</td>
+															<td>Yes</td>
+															<td><span class="label label-danger">FULL</span></td>
+														</tr>
+														<tr>
+															<td>BYO Ribs</td>
+															<td>1 August 2016 7:00pm</td>
+															<td>1 August 2016 11:00pm</td>
+															<td>Yes</td>
+															<td><span class="label label-warning">LIMITED</span></td>
+														</tr>
+														<tr>
+															<td>Bob's Private Steakhouse</td>
+															<td>1 September 2016 6:00pm</td>
+															<td>1 December 2016 12:00pm</td>
+															<td>Yes</td>
+															<td><span class="label label-success">AVAILABLE</span></td>
+														</tr>
+														<tr>
+															<td>Walk-in Pub</td>
+															<td>13 December 2016</td>
+															<td>15 December 2016</td>
+															<td>No</td>
+															<td><span class="label label-default">NOT
+																	AVAILABLE</span></td>
+														</tr>
+													</table>
+												</div>
+											</div>
+											<!-- end tab panel -->
+											<div role="tabpanel" class="tab-pane" id="tab2">
+												<div class="embed-responsive embed-responsive-16by9">
+													<iframe
+														src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6345.022861467272!2d-122.03233!3d37.3303991!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5b6c386ca17%3A0x76c265bfa5a8038a!2sApple!5e0!3m2!1sen!2smy!4v1436187953486"
+														width="800" height="600" frameborder="0" style="border: 0"
+														allowfullscreen class="embed-responsive-item"></iframe>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Section -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Content -->
+	</div>
+
+
+
+
+
+	<!-- Start Scripts -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+	<script src="js/jquery-1.12.0.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/sidebar_menu.js"></script>
+	<!-- End Scripts -->
+</body>
+</html>

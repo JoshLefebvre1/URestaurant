@@ -1,0 +1,546 @@
+/*
+ * File name: custome.css
+ * Author: Jeremy Chen and Christopher Elliott
+ * Date: 01/02/2015 (DD/MM/YYYY)
+ * Styles for custom CSS and overrides.
+ */
+ 
+/* ======================
+BootStrap Modifications
+========================*/
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+/* ======================
+Login and Sign Up Forms
+========================*/
+
+.lgn-pnl {
+  	margin: auto;
+  	z-index: 10;
+  	position: relative;
+  	
+}
+
+.sgn-pnl{
+	position: relative;
+	z-index: 10;
+}
+
+#lgn-modal .modal-dialog {
+	width: 400px;
+	position: relative;
+	top: 50px;
+}
+
+#lgn-modal .modal-body {
+	max-height: 650px;
+}
+
+#sgn-modal .modal-dialog {
+	width: 400px;
+	position: relative;
+	top: 50px;
+}
+
+#sgn-modal .modal-body {
+	max-height: 550px;
+}
+
+#hm-img {
+	width: 100%;
+    height: 100%;
+    background-image: url("../content/nightlife.jpg");
+}
+
+.row.sgn-cntrl {
+	margin: 5px 10px 0px 10px;
+}
+
+.sgn-labl {
+	background-color: rgba(231, 76, 60, 0);
+}
+
+.label {
+	background-color: rgba(231, 76, 60, 0);
+}
+
+.sgn-labl.required {
+	background-color: rgba(231, 76, 60, 1);
+}
+
+.sgn-labl.required:focus {
+	background-color: rgba(231, 76, 60, 0);
+}
+
+input.required {
+	border: 3px solid;
+	border-color: rgb(231, 76, 60);
+}
+
+input.required:focus {
+	border-color: #f1f1f1;
+}
+
+input.required + .popover {
+	color: #fff;
+	background-color: rgb(231, 76, 60);
+}
+
+.modal-header.required {
+	background-color: rgb(231, 76, 60);
+}
+
+.popover {
+	width: 200px;
+	text-align: center;
+}
+
+.popover.right > .arrow {
+	border-right-color: rgb(231, 76, 60);
+}
+
+.popover.right .arrow:after {
+  	border-right-color: rgb(231, 76, 60);
+}
+
+.popover.top > .arrow {
+	border-top-color: rgb(231, 76, 60);
+}
+
+.popover.top .arrow:after {
+  	border-top-color: rgb(231, 76, 60);
+}
+
+/* ======================
+Headline Styles
+========================*/
+
+#headline {
+	background-image: url("../content/nightlife.jpg");
+	background-position: 50% 50%;
+	height: 700px;
+}
+
+
+/* ======================
+Main content
+========================*/
+#page-content-wrapper {
+	width: 100%;
+	position: absolute;
+	padding-left: 13em;
+	transition: padding-left 0.3s linear;
+	-moz-transition: padding-left 0.3s linear;
+	-webkit-transition: padding-left 0.3s linear;		
+}
+
+.main-content {
+	padding: 5em;
+}
+
+.jumbotron .caption p {
+	font-size: 15px;
+}
+
+.msg-center {
+	font-size: 15px;
+	border-radius: 10px;
+	bottom: 0;
+	position: fixed;
+	min-height: 42px !important;
+	padding: 10px;
+	margin: 10px 10px 10px 0px;
+	resize: none !important;
+}
+
+/* title with line */
+.section-title {
+	cursor: pointer;
+}
+/*
+.section-title > div > h4 > span:hover {
+	color: #00bc8c;
+}
+*/
+/* title with line */
+h4.background:after {
+    border-bottom: 1px solid #afafaf;
+    -webkit-box-shadow: 0 1px 0 0 white;
+    -moz-box-shadow: 0 1px 0 0 white;
+    box-shadow: 0 1px 0 0 white;
+    content: "";
+    margin: 0 auto; /* this centers the line to the full width specified */
+    position: absolute;
+    top: 50%; left: 0; right: 0;
+    width: 100%;
+    z-index: -1;
+}
+/* title with line */
+h4 > span { 
+    /* to hide the lines from behind the text, you have to set the background color the same as the container */ 
+    background: #222222; 
+    padding: 0 15px; 
+}
+
+.thumbnail {
+	padding: 10px;
+}
+
+/* ======================
+File drag n drop
+https://css-tricks.com/drag-and-drop-file-uploading/
+========================*/
+.box__dragndrop,
+.box__uploading,
+.box__success,
+.box__error {
+  	display: none;
+}
+
+.box.has-advanced-upload {
+	background-color: white;
+	outline: 2px dashed black;
+	outline-offset: -10px;
+}
+.box.has-advanced-upload .box__dragndrop {
+  	display: inline;
+}
+
+.box.is-dragover {
+  	background-color: grey;
+}
+
+.box.is-uploading .box__input {
+  	visibility: none;
+}
+.box.is-uploading .box__uploading {
+  	display: block;
+}
+
+/* ======================
+Event tile images
+========================*/
+.evt-img {
+	height: 100%;
+	max-height: 125px;
+	width: 100%;
+	max-width: 200px;
+}
+
+/*.hosted-evt {
+	border: 1px solid;
+	border-color: green;
+}*/
+
+/*.public-evt {
+	border: 1px solid;
+	border-color: blue;
+}*/
+
+/* ======================
+	Error page
+========================*/
+.errorDiv {
+	width: 100%;
+	height: 1000px;
+	background-image: url("../content/Untitled-1.png");
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+
+.errorDiv span.eHeader {
+	position: relative;
+	left: 800px;
+	top: 20px;
+	font-size: 300px;
+	color: #36cc79;
+}
+
+.errorDiv p.eSubHeader {
+	position: relative;
+	left: 800px;
+	font-size: 36px;
+	font-color: #000;
+	top: -65px;
+}
+
+.errorDiv p {
+	position: relative;
+	left: 800px;
+	top: -56px;
+	color: #4c4c4c;
+	font-size: 24px;
+}
+
+/* ======================
+	Contacts page
+========================*/
+.list-group {
+	flex: 1 1 9em;
+	min-width: 8em;
+	justify-content: space-between;
+}
+
+.list-group-item {
+	display: flex;
+	flex-wrap: wrap;
+	flex: 1 1 10em; /* grow, shrink, basis */
+	cursor: pointer;
+}
+
+.list-group-item:hover {
+	background-color: #00bc8c;
+}
+
+.list-group-item.selected {
+	background-color: #00bc8c;
+}
+
+.userItem {
+	flex: 1 1 10em;
+}
+
+.userItem i, .userItem img {
+	margin-right: 20px;
+}
+
+.list-group-item-heading {
+	color: white;
+	display:inline;
+	flex: 1 1 10em;
+}
+.list-group-item-text {
+	color: white;
+	flex: 1 1 10em;
+}
+.list-group-item p {
+	color: white;
+}
+/* ======================
+	View Event page
+========================*/
+.eventDiv {
+	width: 100%;
+	height: 50%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.eventDiv span.eHeader {
+	position: relative;
+	left: 800px;
+	top: 20px;
+	font-size: 300px;
+	color: #36cc79;
+}
+
+.eventDiv p.eSubHeader {
+	position: relative;
+	left: 800px;
+	font-size: 36px;
+	font-color: #000;
+	top: -65px;
+}
+
+.eventDiv p {
+	position: relative;
+	left: 800px;
+	top: -56px;
+	color: #4c4c4c;
+	font-size: 24px;
+
+}
+
+.horizontal {
+	flex-direction: row;
+}
+
+.vertical {
+	flex-direction: column;
+}
+
+.btn-circle {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 2em;
+  line-height: 1.62;
+  border-radius: 40px;
+}
+
+.manageContactsDiv a.mcLink:hover {
+	background-color: #00bc8c;
+}
+
+.addContactAndGroupDiv {
+	margin-top: 30px;
+	display: flex;
+	flex-flow: row no-wrap;
+}
+
+.view_eventImage {
+	height: 100%;
+	max-height:  2000px;
+	width: 100%;
+	max-width: 2000px;
+}
+
+.my-container {
+    position: relative;
+    overflow: hidden;
+    
+}
+.my-container  h1 {
+    padding-top: 0px;
+    padding-bottom: 280px;
+    padding-right: 0px;
+    position: relative;
+    z-index: 2;
+} 
+
+.my-container  h4 {
+    padding-top: 300px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    position: relative;
+    z-index: 2;
+}
+.my-container  h5 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    position: relative;
+    z-index: 2;
+}  
+
+.my-container img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+/* ======================
+	Google Maps
+========================*/
+#searchEventsMap {
+	border-radius: 8px; padding: 10px 10px; background: #303030; width: 1085px; display: block; margin-left: auto; margin-right: auto;
+}
+#searchEventsMap2 {
+	border-radius: 8px; padding: 10px 10px 10px 10px; background: #303030; width: 580px; display: block; margin-left: auto; margin-right: auto;
+}
+#eventMap {
+	border-radius: 8px; padding: 10px 10px; background: #303030; width: 1085px; display: block; margin-left: auto; margin-right: auto;
+}
+
+#map_canvas {
+	width: 1065px; 
+	height: 500px;
+}
+#map_canvas2 {
+	top: 0;
+	right: 0;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-right: 2px;
+	margin-left: 10px;
+	position: absolute;
+	width: 98%; 
+	height: 710px;
+}
+#myMap {
+        width: 500px;
+        height: 400px;
+      }
+
+#mapLabelTop {
+ font-family: Trebuchet MS, Arial; font-size: 13px;
+ position: absolute;  float:left;     top:2px;     left:40px;
+ z-index:999; color: #00ffff; font-weight:bold;
+}
+#mapLabelTop2 {
+ font-family: Trebuchet MS, Arial; font-size: 13px;
+ position: relative;  float:left;     top:2px;     left:40px;
+ z-index:999; color: #00ffff; font-weight:bold;
+}
+
+#location {
+	font-family: Trebuchet MS; font-size: 8pt; font-weight: bold; color: #ffff00; width: 320px; text-align: left;
+}
+
+.mapBottomPanel {
+	font-family: Trebuchet MS; font-size: 9pt; color: #ffffff;
+}
+
+#mapPanelTop {
+	font-family: Trebuchet MS;
+	font-size: 8pt;
+	font-weight: bold;
+	position: absolute;
+	top: 126px;
+	width: 1065px;
+	height: 25px;
+	background: #404040;
+	color: #000000;
+	opacity: 0.60;
+	z-index: 999;
+}
+
+#mapPanelTop2 {
+	font-family: Trebuchet MS;
+	font-size: 8pt;
+	font-weight: bold;
+	left 0;
+	position: absolute;
+	top: 60px;
+	width: 580px;
+	height: 25px;
+	background: #404040;
+	color: #000000;
+	opacity: 0.60;
+	z-index: 999;
+}
+
+#window-locPanel {
+  position: absolute;  float:left;     top:360px;     left:380px;  z-index:100; display: block;
+  width: 1px; height: 110px; overflow: visible;
+  border: 0px solid black;
+  border-radius: 25px;
+  background-color: white;
+  font-family: Trebuchet MS, Arial; font-size: 11px; font-weight: bold; color: maroon;
+  visibility: hidden;
+}
+
+#main-locPanel {
+  position: absolute;  float:left;     top:18px;     left:0px;  z-index:100;
+  width: 296px; height: auto; overflow: scroll;
+  border: 0px;
+  background-color: white;
+  font-family: Trebuchet MS; font-size: 11px; font-weight: regular; color: maroon;
+}
+
+#top-locPanel {
+  position: absolute;  float:left;     top:0px;     left:0px;  z-index:100;
+  width: 296px; height: 18px; text-align: center; padding-top: 3px; padding-bottom: 5px;  vertical-align: middle;
+  border: 0px;
+  background-color: #303030;
+  font-family: Trebuchet MS, Arial; font-size: 12px; font-weight: regular; color: white;
+}
+
+
+
+
+
+
+
+
+
+
